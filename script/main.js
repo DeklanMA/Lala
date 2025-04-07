@@ -146,6 +146,7 @@ const animationTimeline = () => {
 
   document.getElementById("replay").addEventListener("click", () => {
     const audio = document.querySelector(".song");
+    document.getElementById("wishText").scrollTop = 0;
     tl.restart();
     audio.currentTime = 0;
     audio.play();
@@ -159,6 +160,7 @@ const song = document.querySelector(".song");
 
 playButton.addEventListener("click", () => {
   song.play(); // Play audio
+  document.getElementById("wishText").scrollTop = 0;
   document.querySelector(".loader").style.display = "none"; // Sembunyikan loader
   document.querySelector(".container").style.visibility = "visible"; // Tampilkan konten
 
